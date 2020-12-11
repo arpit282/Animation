@@ -3,42 +3,22 @@ body{
     padding: 0;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg,#6c5ce7,#fd79a8,#0984e3);
-    width: 100wh;
+.container{
+    width: 100vw;
     height: 100vh;
 }
 
-.container{
-    position: relative;
-    width: 500px;
-    height: 500px;
-    border: 2px solid #000;
+.container:nth-child(odd){
+    background: url('https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-.box{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.box:nth-child(1){
-    background: url('https://images.pexels.com/photos/4834899/pexels-photo-4834899.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-}
-.box:nth-child(2){
-    background: url('https://images.pexels.com/photos/3224164/pexels-photo-3224164.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-    z-index: 2;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
-    transition: 0.5s;
-}
-.box:nth-child(2):hover{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-
-.box:nth-child(1):hover  ~ .box:nth-child(2) {
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+.container:nth-child(even){
+    background: url('https://images.pexels.com/photos/2922672/pexels-photo-2922672.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
